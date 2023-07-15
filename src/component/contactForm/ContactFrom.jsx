@@ -6,9 +6,9 @@ import { FaPhoneAlt } from "react-icons/Fa";
 import { HiMail } from "react-icons/hi";
 
 function ContactFrom() {
-    const [name, setName] = useState("Anshu");
-  const [email, setEmail] = useState("support@dosomecoding.com");
-  const [text, setText] = useState("Subscribe to this channel");
+    const [name, setName] = useState("Aadil");
+  const [email, setEmail] = useState("rkaadil06.com");
+  const [text, setText] = useState("love coding");
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -35,15 +35,18 @@ function ContactFrom() {
         <form onSubmit={onSubmit}>
           <div className={styles.form_control}>
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" />
+            <input type="text" name="name"  value={name}
+              onChange={(e) => setName(e.target.value)/>
           </div>
           <div className={styles.form_control}>
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" />
+            <label htmlFor="email" >Email</label>
+            <input type="text" name="email"   value={email}
+              onChange={(e) => setEmail(e.target.value) />
           </div>
           <div className={styles.form_control}>
             <label htmlFor="text">Text</label>
-            <textarea name="text" rows="8" />
+            <textarea name="text" rows="8" value={text}
+              onChange={(e) => setText(e.target.value)} />
           </div>
           <div style={{display:"flex",justifyContent:"end" , }}>
 
